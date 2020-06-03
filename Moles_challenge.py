@@ -271,6 +271,8 @@ if __name__ == '__main__':
     print("starting ",int(number)," questions !\n" )
     time.sleep(1)
     no =0
+    cor =0
+
     while no <= int(number)-1:
         print("\nQuestion no" , no+1)
         # do
@@ -292,9 +294,21 @@ if __name__ == '__main__':
         print("answer is ..[", answer, "]   ", end="")
         if typed == answer:
             print(" ... FUCKIN' CORRECT !")
+            cor +=1
         else:
             print(" ... BLOODY WRONG !")
         no+=1
+    print("\n\n---------------------------------------------------------------")
+    print("\n   RESULTS: ", cor , " out of ",number," correct ... ", end="")
+    if int(cor) == int(number):
+        print("LUCKY YOU !")
+    else:
+        print("PRACTICE MAKES PERFECT")
+    print("\n---------------------------------------------------------------")
+
+
+
+
 
 
 
